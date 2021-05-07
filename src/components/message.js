@@ -4,18 +4,18 @@ import './message.css'
 
 
 
-function Message() {
+function Message({message,timestamp,userimage,user}) {
     return (
         <div className="message">
-             <img src="" alt="" />
+             <img src={userimage} alt="" />
       <div className="message_info">
         <h4>
-          user
+         {user}
           <span className="message_timestamp">
-           Date
+          {new Date(timestamp?.toDate()).toUTCString()}
           </span>
         </h4>
-        <p>message</p>
+        <p>{message}</p>
       </div>
             
         </div>

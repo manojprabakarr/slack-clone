@@ -1,10 +1,32 @@
 import React from 'react'
 import './sidebaroption.css'
+import {useHistory} from 'react-router-dom'
+import db from '../firebase'
 
-function sidebaroption({ Icon, title, id, addChannelOption }) {
+function Sidebaroption({ Icon, title, id, addChannelOption }) {
+  const History =useHistory();
+
+
+  const Selectchannel=()=>{
+    if (id) {
+      History.push(`/room/${id}`)
+    }
+    else {
+      History.push(title)
+    }
+  }
+
+  const addchannel = () => {
+    const channelName = prompt("Please enter a channel name");
+
+    db.collection("rooms").add({
+      name: channelName,
+    });
+  };
     return (
         <div
         className="sidebar_option"
+        onClick={addChannelOption ? addchannel : Selectchannel}
         
       >
         {Icon && <Icon className="sidebarOption_icon" />}
@@ -19,4 +41,4 @@ function sidebaroption({ Icon, title, id, addChannelOption }) {
     )
 }
 
-export default sidebaroption
+export default Sidebaroption

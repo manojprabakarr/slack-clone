@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="app">
        <Router>
-        {/*user ? (*/}
+        {user ? (
           <>
             <Header />
             <div className="app_body">
@@ -26,8 +26,9 @@ function App() {
               </Switch>
             </div>
           </>
-        {/*}) : (*/}
+        ) : (
           <Login />
+        )}
         
       </Router>
   

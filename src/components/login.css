@@ -1,0 +1,43 @@
+.login{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+   
+}
+.logincontainer{
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12), 0 1px;
+    background-color: white;
+
+}
+.logincontainer >img{
+  margin-bottom: 50px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.logincontainer>h1{
+    font-weight: 500;
+    font-family: monospace;
+}
+.logincontainer>p{
+    font-family: monospace;
+    font-weight: 400;
+    font-size: large;
+}
+
+.logincontainer>button{
+    border-radius: 12px;
+    background-color: violet;
+    font-size: large;
+    font-family: monospace;
+    color: black;
+    padding: 10px;
+}
+
+.logincontainer:hover>button{
+    color: white;
+}

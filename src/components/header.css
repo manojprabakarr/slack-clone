@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--slack-color);
+   
+}
+.headerleft{
+    margin-left: 350px;
+    padding-top: 10px;
+    color: white;
+
+}
+.headersearch{
+    display: flex;
+    align-items: center;
+    color: white;
+   
+  
+
+}
+.headersearch>input{
+    width: 500px;
+    margin-left: -400px;
+    border-radius: 4px;
+    border-color: black;
+    height: 25px;
+}
+.headerright{
+    display: flex;
+    
+  
+    
+    
+
+}
+.headeravatar{
+    margin-right: 20px;
+    
+
+    
+
+}
